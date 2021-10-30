@@ -92,7 +92,7 @@ public class Client {
         Animal kitty = new Animal("Cat");
         Animal bingo = new Animal("Dog");
 
-        // OCP 위반 : 확장에 닫혀 있음.
+        // OCP 위반 : 확장에 닫혀 있음. hey를 수정하지 않고는 동물의 종류를 추가 할 수 없다.
         Animal cow = new Animal("Cow");
         Animal sheep = new Animal("Sheep");
 
@@ -102,6 +102,7 @@ public class Client {
         hey(sheep);
     }
 
+    // OCP 위반: 만약에 동물의 종류가 추가되면 아래 함수도 수정해줘야 한다.
     static void hey(Animal animal) {
         if (animal.type.equals("Cat")) {
             System.out.println("meow");
