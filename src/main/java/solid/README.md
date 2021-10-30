@@ -173,7 +173,7 @@ class Sheep implements Animal{
 <br/><br/>
 
 ## LSP(리스코프 치환 원칙)(Liskov Substitution)
-파생 유형은 기본 유형을 완전히 대체할 수 있어야 합니다.
+파생 유형은 기본 유형을 완전히 대체할 수 있어야 합니다.  
 부모-자식 클래스 관계에서 자식은 부모를 대신 할 수 있어야 하는데, 자식은 부모의 설계 의도를 지켜야한다.
 
 LSP는 파생 클래스가 기본 클래스를 완전히 대체할 수 있도록 상속 계층에 적용됩니다.  
@@ -181,7 +181,7 @@ LSP를 위반하면 정의되지 않은 동작이 발생하여 버그가 있는 
 
 #### 위반 예제 
 
-1. 
+1. 생선은 고양이를 대체하지 못한다.
 ```java
 public class Client {
     public static void main(String[] args) {
@@ -213,11 +213,11 @@ class Fish extends Cat{
 }
 ```
 
-2. Square 파생 클래스 및 Rectangle 기본 클래스의 일반적인 예를 살펴보겠습니다.  
-  
-Rectangle 기본 클래스를 파생 클래스 Square로 바꿀 수 없기 때문에 위의 클래스는 LSP를 따르지 않습니다.   
-Square 클래스에는 추가 제약 조건이 있습니다. 즉, 높이와 너비가 동일해야 합니다.     
-따라서 Rectangle을 Square 클래스로 대체하면 예기치 않은 동작이 발생할 수 있습니다.  
+<br/>
+
+2. Rectangle 기본 클래스를 파생 클래스 Square로 바꿀 수 없기 때문에 위의 클래스는 LSP를 따르지 않습니다. 
+   - Square 클래스에는 추가 제약 조건이 있습니다. 즉, 높이와 너비가 동일해야 합니다.
+   - 따라서 Rectangle을 Square 클래스로 대체하면 예기치 않은 동작이 발생할 수 있습니다.  
 
 ```java
 public class Rectangle {
