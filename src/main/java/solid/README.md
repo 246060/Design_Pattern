@@ -258,11 +258,75 @@ public class Square extends Rectangle {
 #### Before - 위반 
 
 ```java
+interface  ICar {
+    void drive();
+    void turnLeft();
+    void turnRight();
+
+    void steer();
+    void steerLeft();
+    void steerRight();
+}
+
+class RoadCar implements ICar{
+    @Override public void drive() { System.out.println("사용함"); }
+    @Override public void turnLeft() { System.out.println("사용함"); }
+    @Override public void turnRight() { System.out.println("사용함"); }
+
+    @Override public void steer() {/* 사용하지 않음 */}
+    @Override public void steerLeft() {/* 사용하지 않음 */}
+    @Override public void steerRight() {/* 사용하지 않음 */}
+}
+
+class BoatCar implements ICar{
+    @Override public void drive() {/* 사용하지 않음 */}
+    @Override public void turnLeft() {/* 사용하지 않음 */}
+    @Override public void turnRight() {/* 사용하지 않음 */}
+
+    @Override public void steer() { System.out.println("사용함"); }
+    @Override public void steerLeft() { System.out.println("사용함"); }
+    @Override public void steerRight() { System.out.println("사용함"); }
+}
+
 ```
 
 #### After
 
 ```java
+interface  ICar {
+    void drive();
+    void turnLeft();
+    void turnRight();
+}
+
+interface IBoat{
+    void steer();
+    void steerLeft();
+    void steerRight();
+}
+
+class RoadCar implements ICar{
+    @Override public void drive() { System.out.println("사용함"); }
+    @Override public void turnLeft() { System.out.println("사용함"); }
+    @Override public void turnRight() { System.out.println("사용함"); }
+}
+
+class Boat implements IBoat{
+    @Override public void steer() { System.out.println("사용함"); }
+    @Override public void steerLeft() { System.out.println("사용함"); }
+    @Override public void steerRight() { System.out.println("사용함"); }
+}
+
+class BoatCar implements ICar, IBoat{
+    @Override public void drive() { System.out.println("사용함"); }
+    @Override public void turnLeft() { System.out.println("사용함"); }
+    @Override public void turnRight() { System.out.println("사용함"); }
+
+    @Override public void steer() { System.out.println("사용함"); }
+    @Override public void steerLeft() { System.out.println("사용함"); }
+    @Override public void steerRight() { System.out.println("사용함"); }
+}
+
 ```
 
 
@@ -275,10 +339,77 @@ public class Square extends Rectangle {
 #### Before - 위반 
 
 ```java
+class Cat {
+   void speak() {}
+}
+
+class Dog {
+   void speak() {}
+}
+
+class Sheep {
+   void speak() {}
+}
+
+class Cow {
+   void speak() {}
+}
+
+class Zoo {
+   Cat cat;
+   Dog dog;
+   Sheep sheep;
+   Cow cow;
+
+   public Zoo(Cat cat, Dog dog, Sheep sheep, Cow cow) {
+      this.cat = cat;
+      this.dog = dog;
+      this.sheep = sheep;
+      this.cow = cow;
+   }
+}
 ```
 
 
 #### After
+high level 클래스(zoo)와 low level 클래스(cat, dog) 모두 추상화 클래스(animal)에 의존하게 만든다.  
+이러한 과정에서 화살표 방향이 바뀌기 것을 dependency inversion 이라고 한다.
+
+<img src="di.PNG" style="width: 500px;">
 
 ```java
+class Animal {
+   void speak() {}
+}
+
+class Cat extends Animal {
+   void speak() {}
+}
+
+class Dog extends Animal {
+   void speak() {}
+}
+
+class Sheep extends Animal {
+   void speak() {}
+}
+
+class Cow extends Animal {
+   void speak() {}
+}
+
+/* Animal 종류가 추가 되어도 Zoo는 수정할 필요 없어진다. */
+class Zoo {
+   List<Animal> animals = new ArrayList<>();
+
+   void addAnimal(Animal animal) {
+      animals.add(animal);
+   }
+
+   void speakAll() {
+      for (Animal animal : animals) {
+         animal.speak();
+      }
+   }
+}
 ```
