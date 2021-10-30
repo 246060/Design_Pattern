@@ -213,7 +213,7 @@ class Fish extends Cat{
 }
 ```
 
-<br/>
+<br/><br/>
 
 2. Rectangle 기본 클래스를 파생 클래스 Square로 바꿀 수 없기 때문에 위의 클래스는 LSP를 따르지 않습니다. 
    - Square 클래스에는 추가 제약 조건이 있습니다. 즉, 높이와 너비가 동일해야 합니다.
