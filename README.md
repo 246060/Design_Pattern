@@ -1,7 +1,7 @@
 # Java Design Pattern
 자바로 작성한 디자인 패턴 연습
  
-## SOLID Principles
+## [SOLID Principles](src/main/java/solid)
 - Single Responsibility
 - Open-Closed
 - Liskov Substitution
