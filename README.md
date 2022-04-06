@@ -9,7 +9,6 @@
 - Dependency Inversion
 
 ## Creational
-- [Factory](src/main/java/facade) 
 - [Factory Method](src/main/java/factory_method)
 - [Abstract Factory](src/main/java/abstract_factory)
 - [Builder](src/main/java/bridge)
