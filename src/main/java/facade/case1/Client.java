@@ -1,7 +1,9 @@
 package facade.case1;
 
-import static practice_1.facade.case1.HelperFacade.DBTypes.*;
-import static practice_1.facade.case1.HelperFacade.ReportTypes.*;
+import static facade.case1.HelperFacade.DBTypes.MYSQL;
+import static facade.case1.HelperFacade.DBTypes.ORACLE;
+import static facade.case1.HelperFacade.ReportTypes.HTML;
+import static facade.case1.HelperFacade.ReportTypes.PDF;
 
 public class Client {
     public static void main(String[] args) {

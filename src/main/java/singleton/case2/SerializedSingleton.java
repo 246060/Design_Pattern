@@ -1,11 +1,9 @@
 package singleton.case2;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 public class SerializedSingleton implements Serializable {
 
-    @Serial
     private static final long serialVersionUID = -7604766932017737115L;
 
     private SerializedSingleton() {}
@@ -18,7 +16,6 @@ public class SerializedSingleton implements Serializable {
         return SingletonHelper.instance;
     }
 
-    @Serial
     protected Object readResolve() {
         return getInstance();
     }

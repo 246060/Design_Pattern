@@ -1,12 +1,10 @@
 package observer.case1;
 
-import practice_1.observer.case1.editor.Editor;
-import practice_1.observer.case1.listeners.EmailNotificationListener;
-import practice_1.observer.case1.listeners.LogOpenListener;
+import static observer.case1.listeners.EventType.*;
 
-import static practice_1.observer.case1.listeners.EventType.OPEN;
-import static practice_1.observer.case1.listeners.EventType.SAVE;
-
+import observer.case1.editor.Editor;
+import observer.case1.listeners.EmailNotificationListener;
+import observer.case1.listeners.LogOpenListener;
 
 public class Client {
 
