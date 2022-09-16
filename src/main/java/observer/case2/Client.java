@@ -1,24 +1,28 @@
 package observer.case2;
 
+import observer.case2.observer.BinObserver;
+import observer.case2.observer.HexObserver;
+import observer.case2.observer.OctObserver;
+
 import java.util.Scanner;
 
 public class Client {
 
-    // https://sourcemaking.com/design_patterns/observer/java/1
-    public static void main(String[] args) {
+	// https://sourcemaking.com/design_patterns/observer/java/1
+	public static void main(String[] args) {
 
-        Subject sub = new Subject();
+		Subject sub = new Subject();
 
-        // Client configures the number and type of Observers
-        sub.add(new HexObserver());
-        sub.add(new OctObserver());
-        sub.add(new BinObserver());
+		// Client configures the number and type of Observers
+		sub.add(new HexObserver());
+		sub.add(new OctObserver());
+		sub.add(new BinObserver());
 
-        Scanner scan = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
-        for (int i = 0; i < 5; i++) {
-            System.out.print("\nEnter a number: ");
-            sub.setState(scan.nextInt());
-        }
-    }
+		for (int i = 0; i < 5; i++) {
+			System.out.print("\nEnter a number: ");
+			sub.setState(scan.nextInt());
+		}
+	}
 }

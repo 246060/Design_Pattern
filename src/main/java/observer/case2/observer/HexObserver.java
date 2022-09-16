@@ -1,4 +1,6 @@
-package observer.case2;
+package observer.case2.observer;
+
+import observer.case2.Subject;
 
 public class HexObserver extends Observer {
     @Override
