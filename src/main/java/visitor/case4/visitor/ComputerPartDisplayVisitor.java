@@ -1,4 +1,9 @@
-package visitor.case4;
+package visitor.case4.visitor;
+
+import visitor.case4.visitable.Computer;
+import visitor.case4.visitable.Keyboard;
+import visitor.case4.visitable.Moniter;
+import visitor.case4.visitable.Mouse;
 
 public class ComputerPartDisplayVisitor implements ComputerPartVisitor{
 

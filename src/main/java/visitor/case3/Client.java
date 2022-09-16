@@ -1,23 +1,29 @@
 package visitor.case3;
 
+import visitor.case3.visitable.Document;
+import visitor.case3.visitable.JsonElement;
+import visitor.case3.visitable.XmlElement;
+import visitor.case3.visitor.ElementVisitor;
+import visitor.case3.visitor.Visitor;
+
 import java.util.UUID;
 
 public class Client {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        Visitor v = new ElementVisitor();
+		Visitor v = new ElementVisitor();
 
-        Document d = new Document(generateUuid());
-        d.elements.add(new JsonElement(generateUuid()));
-        d.elements.add(new JsonElement(generateUuid()));
-        d.elements.add(new XmlElement(generateUuid()));
+		Document d = new Document(generateUuid());
+		d.add(new JsonElement(generateUuid()));
+		d.add(new JsonElement(generateUuid()));
+		d.add(new XmlElement(generateUuid()));
 
-        d.accept(v);
-    }
+		d.accept(v);
+	}
 
 
-    private static String generateUuid() {
-        return UUID.randomUUID().toString();
-    }
+	private static String generateUuid() {
+		return UUID.randomUUID().toString();
+	}
 }

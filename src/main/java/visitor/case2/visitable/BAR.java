@@ -1,4 +1,6 @@
-package visitor.case2;
+package visitor.case2.visitable;
+
+import visitor.case2.visitor.Visitor;
 
 public class BAR implements Element {
 
@@ -11,3 +13,4 @@ public class BAR implements Element {
         return "BAR";
     }
 }
+

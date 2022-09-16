@@ -1,4 +1,8 @@
-package visitor.case2;
+package visitor.case2.visitor;
+
+import visitor.case2.visitable.BAR;
+import visitor.case2.visitable.BAZ;
+import visitor.case2.visitable.FOO;
 
 public class DownVisitor implements Visitor {
 
