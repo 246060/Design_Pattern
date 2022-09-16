@@ -1,5 +1,7 @@
 package command.case3;
 
+import command.case3.command.Command;
+
 // invoker
 public class OkGoogle {
 

@@ -1,5 +1,7 @@
 package command.case1;
 
+import command.case1.command.Command;
+
 public class FileInvoker {
     public Command command;
 

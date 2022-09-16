@@ -5,7 +5,7 @@ public class BasicSingleton {
     private static BasicSingleton instance;
     private String value;
 
-    public BasicSingleton(String value) {
+    private BasicSingleton(String value) {
 
         try {
             // The following code emulates slow initialization.

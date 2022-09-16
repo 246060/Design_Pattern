@@ -1,5 +1,9 @@
 package command.case1;
 
+import command.case1.command.CloseFileCommand;
+import command.case1.command.OpenFileCommand;
+import command.case1.command.WriteFileCommand;
+
 public class Client {
 
     // https://www.journaldev.com/1624/command-design-pattern

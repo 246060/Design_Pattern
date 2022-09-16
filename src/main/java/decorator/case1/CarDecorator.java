@@ -1,14 +1,15 @@
 package decorator.case1;
 
-public class CarDecorator implements Car{
-    protected Car car;
+public class CarDecorator implements Car {
 
-    public CarDecorator(Car c){
-        this.car=c;
-    }
+	protected Car car;
 
-    @Override
-    public void assemble() {
-        this.car.assemble();
-    }
+	public CarDecorator(Car c) {
+		this.car = c;
+	}
+
+	@Override
+	public void assemble() {
+		this.car.assemble();
+	}
 }

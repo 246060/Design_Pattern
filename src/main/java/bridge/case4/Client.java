@@ -1,15 +1,22 @@
 package bridge.case4;
 
+import bridge.case4.remote_control.LgRemoteControl;
+import bridge.case4.tv.LgTv;
+
 public class Client {
-    public static void main(String[] args) {
 
-        LGTV LGtv = new LGTV();
-        LGRemoteControl LGRemotecontrol = new LGRemoteControl(LGtv);
+	/**
+	 * bridge pattern : 추상화(기능)를 구현에서 분리하여 두 가지가 독립적으로 변할 수 있도록 하는 것
+	 */
+	public static void main(String[] args) {
 
-        //기능 클래스 계층의 최상위 클래스에 구현 클래스 계층의 클래스를 등록함.
-        LGRemotecontrol.on();
-        LGRemotecontrol.channel("101번");
-        LGRemotecontrol.off();
-
-    }
+		/**
+		 * LgRemoteControl: 기능
+		 * LgTv: 구현
+		 * */
+		LgRemoteControl lgRemoteControl = new LgRemoteControl(new LgTv());
+		lgRemoteControl.on();
+		lgRemoteControl.channel("101번");
+		lgRemoteControl.off();
+	}
 }

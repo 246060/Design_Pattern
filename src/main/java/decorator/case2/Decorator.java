@@ -2,19 +2,19 @@ package decorator.case2;
 
 public class Decorator implements LCD {
 
-    private LCD inner;
+	private LCD inner;
 
-    public Decorator(LCD i) {
-        inner = i;
-    }
+	public Decorator(LCD i) {
+		inner = i;
+	}
 
-    @Override
-    public void write(String[] s) {
-        inner.write(s);
-    }
+	@Override
+	public void write(String[] s) {
+		inner.write(s);
+	}
 
-    @Override
-    public void read(String[] s) {
-        inner.read(s);
-    }
+	@Override
+	public void read(String[] s) {
+		inner.read(s);
+	}
 }
