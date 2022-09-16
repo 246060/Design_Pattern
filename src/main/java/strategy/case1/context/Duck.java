@@ -1,4 +1,7 @@
-package strategy.case1;
+package strategy.case1.context;
+
+import strategy.case1.strategy.FlyBehavior;
+import strategy.case1.strategy.QuackBehavior;
 
 public class Duck {
     QuackBehavior quackBehavior;

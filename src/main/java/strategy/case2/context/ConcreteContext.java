@@ -1,4 +1,4 @@
-package strategy.case2;
+package strategy.case2.context;
 
 public class ConcreteContext extends Context {
 
