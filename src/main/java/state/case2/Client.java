@@ -5,15 +5,15 @@ import java.io.InputStreamReader;
 
 public class Client {
 
-    public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {
 
-        InputStreamReader is = new InputStreamReader(System.in);
-        Chain chain = new Chain();
+		InputStreamReader is = new InputStreamReader(System.in);
+		Chain chain = new Chain();
 
-        while (true) {
-            System.out.print("Press 'Enter'");
-            is.read();
-            chain.pull();
-        }
-    }
+		while (true) {
+			System.out.print("Press 'Enter'");
+			is.read();
+			chain.pull();
+		}
+	}
 }

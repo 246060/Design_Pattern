@@ -1,4 +1,6 @@
-package decorator.case3;
+package decorator.case3.decorator;
+
+import decorator.case3.DataSource;
 
 import java.util.Base64;
 

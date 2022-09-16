@@ -1,4 +1,6 @@
-package decorator.case2;
+package decorator.case2.decorator;
+
+import decorator.case2.LCD;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,5 +1,8 @@
 package decorator.case2;
 
+import decorator.case2.decorator.DecoratorDemo;
+import decorator.case2.decorator.Scramble;
+
 public class Client {
 
 

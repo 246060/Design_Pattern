@@ -1,5 +1,9 @@
 package decorator.case3;
 
+import decorator.case3.decorator.CompressionDecorator;
+import decorator.case3.decorator.DataSourceDecorator;
+import decorator.case3.decorator.EncryptionDecorator;
+
 public class Client {
 
 	// https://refactoring.guru/design-patterns/decorator/java/example

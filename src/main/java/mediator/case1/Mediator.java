@@ -3,39 +3,39 @@ package mediator.case1;
 // 1. The "intermediary"
 public class Mediator {
 
-    // 4. The Mediator arbitrates
-    private boolean slotFull = false;
-    private int number;
+	// 4. The Mediator arbitrates
+	private boolean slotFull = false;
+	private int number;
 
-    public synchronized void storeMessage(int num) {
+	public synchronized void storeMessage(int num) {
 
-        // no room for another message
-        while (slotFull == true) {
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+		// no room for another message
+		while (slotFull == true) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 
-        slotFull = true;
-        number = num;
-        notifyAll();
-    }
+		slotFull = true;
+		number = num;
+		notifyAll();
+	}
 
-    public synchronized int retrieveMessage() {
+	public synchronized int retrieveMessage() {
 
-        // no message to retrieve
-        while (slotFull == false) {
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+		// no message to retrieve
+		while (slotFull == false) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 
-        slotFull = false;
-        notifyAll();
-        return number;
-    }
+		slotFull = false;
+		notifyAll();
+		return number;
+	}
 }

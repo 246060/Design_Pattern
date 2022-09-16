@@ -1,4 +1,6 @@
-package decorator.case1;
+package decorator.case1.decorator;
+
+import decorator.case1.Car;
 
 public class LuxuryCar extends CarDecorator {
 

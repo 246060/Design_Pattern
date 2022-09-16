@@ -1,5 +1,8 @@
 package decorator.case1;
 
+import decorator.case1.decorator.LuxuryCar;
+import decorator.case1.decorator.SportsCar;
+
 public class Client {
 
 	// https://www.journaldev.com/1540/decorator-design-pattern-in-java-example
