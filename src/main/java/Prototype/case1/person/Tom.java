@@ -1,4 +1,4 @@
-package Prototype.case1;
+package Prototype.case1.person;
 
 public class Tom implements Person {
     private final String NAME = "Tom";

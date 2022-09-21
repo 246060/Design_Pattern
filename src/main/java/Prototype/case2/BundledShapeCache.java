@@ -1,4 +1,8 @@
-package Prototype.case2.shapes;
+package Prototype.case2;
+
+import Prototype.case2.shapes.Circle;
+import Prototype.case2.shapes.Rectangle;
+import Prototype.case2.shapes.Shape;
 
 import java.util.HashMap;
 import java.util.Map;

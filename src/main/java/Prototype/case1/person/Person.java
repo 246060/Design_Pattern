@@ -1,4 +1,4 @@
-package Prototype.case1;
+package Prototype.case1.person;
 
 public interface Person {
     Person clone();

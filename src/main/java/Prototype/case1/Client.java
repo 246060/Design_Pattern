@@ -1,5 +1,7 @@
 package Prototype.case1;
 
+import Prototype.case1.person.Person;
+
 public class Client {
 
     /*
