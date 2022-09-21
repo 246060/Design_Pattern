@@ -1,4 +1,7 @@
-package adapter.case1;
+package adapter.case1.adapter;
+
+import adapter.case1.adaptee.RoundHole;
+import adapter.case1.adaptee.SquarePeg;
 
 public class SquarePegAdapter {
 

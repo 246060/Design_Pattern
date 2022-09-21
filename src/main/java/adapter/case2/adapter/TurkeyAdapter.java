@@ -1,4 +1,7 @@
-package adapter.case2;
+package adapter.case2.adapter;
+
+import adapter.case2.Duck;
+import adapter.case2.adaptee.Turkey;
 
 public class TurkeyAdapter implements Duck {
 

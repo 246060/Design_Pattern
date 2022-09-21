@@ -1,4 +1,4 @@
-package adapter.case1;
+package adapter.case1.adaptee;
 
 // OLD
 public class SquarePeg {

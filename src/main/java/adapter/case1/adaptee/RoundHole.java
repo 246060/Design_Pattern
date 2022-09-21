@@ -1,4 +1,4 @@
-package adapter.case1;
+package adapter.case1.adaptee;
 
 // NEW
 public class RoundHole {
