@@ -1,26 +1,30 @@
 package composite.case5;
 
+import composite.case5.component.Shape;
+import composite.case5.composite.Drawing;
+import composite.case5.leaf.Circle;
+import composite.case5.leaf.Triangle;
+
 public class Client {
 
-    // https://sourcemaking.com/design_patterns/composite/java/3
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        Composite first = new Row(1);
-        Composite second = new Column(2);
-        Composite third = new Column(3);
-        Composite fourth = new Row(4);
-        Composite fifth = new Row(5);
+		Shape tri = new Triangle();
+		Shape tri1 = new Triangle();
+		Shape cir = new Circle();
 
-        first.add(second);
-        first.add(third);
-        third.add(fourth);
-        third.add(fifth);
-        first.add(new Primitive(6));
-        second.add(new Primitive(7));
-        third.add(new Primitive(8));
-        fourth.add(new Primitive(9));
-        fifth.add(new Primitive(10));
+		Drawing drawing = new Drawing();
+		drawing.add(tri1);
+		drawing.add(tri1);
+		drawing.add(cir);
 
-        first.traverse();
-    }
+		drawing.draw("Red");
+
+		drawing.clear();
+
+		drawing.add(tri);
+		drawing.add(cir);
+		drawing.draw("Green");
+
+	}
 }
