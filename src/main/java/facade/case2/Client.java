@@ -1,15 +1,20 @@
 package facade.case2;
 
-import java.io.File;
+import facade.case2.facade.ShopKeeper;
 
 public class Client {
 
-    // https://refactoring.guru/design-patterns/facade/java/example
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        VideoConversionFacade converter = new VideoConversionFacade();
+		ShopKeeper shopKeeper = new ShopKeeper();
 
-        File mp4Video = converter.convertVideo("youtubevideo.ogg", "mp4");
-        // ...
-    }
+		System.out.println();
+		shopKeeper.iphoneSale();
+
+		System.out.println();
+		shopKeeper.samsungSale();
+
+		System.out.println();
+		shopKeeper.blackberrySale();
+	}
 }

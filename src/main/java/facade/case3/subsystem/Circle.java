@@ -1,4 +1,4 @@
-package facade.case3;
+package facade.case3.subsystem;
 
 public class Circle implements Shape {
     @Override

@@ -1,4 +1,9 @@
-package facade.case3;
+package facade.case3.facade;
+
+import facade.case3.subsystem.Circle;
+import facade.case3.subsystem.Rectangle;
+import facade.case3.subsystem.Shape;
+import facade.case3.subsystem.Square;
 
 public class ShapeMaker {
 

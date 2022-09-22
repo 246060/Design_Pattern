@@ -1,4 +1,4 @@
-package facade.case3;
+package facade.case3.subsystem;
 
 public class Rectangle implements Shape{
     @Override

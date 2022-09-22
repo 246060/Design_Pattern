@@ -1,21 +1,31 @@
 package facade.case1;
 
-import static facade.case1.HelperFacade.DBTypes.MYSQL;
-import static facade.case1.HelperFacade.DBTypes.ORACLE;
-import static facade.case1.HelperFacade.ReportTypes.HTML;
-import static facade.case1.HelperFacade.ReportTypes.PDF;
+import facade.case1.facade.HelperFacade;
+import facade.case1.subsystem.MySqlHelper;
+import facade.case1.subsystem.OracleHelper;
+
+import java.sql.Connection;
 
 public class Client {
-    public static void main(String[] args) {
 
-        final String tableName = "Employee";
+	public static void main(String[] args) {
+		String tableName = "Employee";
 
-        //generating MySql HTML report and Oracle PDF report without using Facade
-        new MySqlHelper().generateMySqlHTMLReport(tableName, MySqlHelper.getMySqlDBConnection());
-        new OracleHelper().generateOraclePDFReport(tableName, OracleHelper.getOracleDBConnection());
+		System.out.println("\nWithout using Facade\n");
 
-        //generating MySql HTML report and Oracle PDF report using Facade
-        HelperFacade.generateReport(MYSQL, HTML, tableName);
-        HelperFacade.generateReport(ORACLE, PDF, tableName);
-    }
+		Connection con = MySqlHelper.getMySqlDBConnection();
+		MySqlHelper mySqlHelper = new MySqlHelper();
+		mySqlHelper.generateMySqlHTMLReport(tableName, con);
+
+		Connection con1 = OracleHelper.getOracleDBConnection();
+		OracleHelper oracleHelper = new OracleHelper();
+		oracleHelper.generateOraclePDFReport(tableName, con1);
+
+		System.out.println("-------------------------------------------");
+		System.out.println("\nUsing Facade\n");
+
+		HelperFacade.generateReport(HelperFacade.DBTypes.MYSQL, HelperFacade.ReportTypes.HTML, tableName);
+		HelperFacade.generateReport(HelperFacade.DBTypes.ORACLE, HelperFacade.ReportTypes.PDF, tableName);
+	}
+
 }
