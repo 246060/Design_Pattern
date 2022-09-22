@@ -1,10 +1,18 @@
 package template_method.case3;
 
+import template_method.case3.implementation.Chess;
+import template_method.case3.implementation.Soccer;
+import template_method.case3.template.Game;
+
 public class Client {
 
-    // https://sourcemaking.com/design_patterns/template_method/java/2
-    public static void main(String[] args) {
-        Generalization algorithm = new Realization();
-        algorithm.findSolution();
-    }
+	public static void main(String[] args) {
+		Game game1 = new Chess();
+		game1.play();
+
+		System.out.println("-------------------------");
+		Game game2 = new Soccer();
+		game2.play();
+	}
+
 }

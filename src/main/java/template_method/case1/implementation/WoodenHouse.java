@@ -1,4 +1,6 @@
-package template_method.case1;
+package template_method.case1.implementation;
+
+import template_method.case1.template.HouseTemplate;
 
 public class WoodenHouse extends HouseTemplate {
 

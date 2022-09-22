@@ -1,4 +1,4 @@
-package template_method.case1;
+package template_method.case1.template;
 
 abstract public class HouseTemplate {
 

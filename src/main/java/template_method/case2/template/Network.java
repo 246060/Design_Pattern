@@ -1,10 +1,10 @@
-package template_method.case2;
+package template_method.case2.template;
 
 
 abstract public class Network {
 
-    String userName;
-    String password;
+    protected String userName;
+    protected String password;
 
     public Network() { }
 

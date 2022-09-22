@@ -2,6 +2,10 @@ package template_method.case2;
 
 
 
+import template_method.case2.implementation.Facebook;
+import template_method.case2.implementation.Twitter;
+import template_method.case2.template.Network;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
