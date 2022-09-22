@@ -1,10 +1,10 @@
 package bridge.case3;
 
-import bridge.case3.weapon.Bow;
-import bridge.case3.weapon.Sword;
-import bridge.case3.weapon_handler.Smith;
-import bridge.case3.weapon_handler.Warrior;
-import bridge.case3.weapon_handler.WeaponHandler;
+import bridge.case3.concrete_implementor.Bow;
+import bridge.case3.concrete_implementor.Sword;
+import bridge.case3.refined_abstraction.Smith;
+import bridge.case3.refined_abstraction.Warrior;
+import bridge.case3.abstraction.WeaponHandler;
 
 public class Client {
 

@@ -1,7 +1,7 @@
 package bridge.case4;
 
-import bridge.case4.remote_control.LgRemoteControl;
-import bridge.case4.tv.LgTv;
+import bridge.case4.refined_abstraction.LgRemoteControl;
+import bridge.case4.concrete_implementor.LgTv;
 
 public class Client {
 

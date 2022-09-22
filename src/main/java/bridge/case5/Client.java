@@ -1,10 +1,10 @@
 package bridge.case5;
 
-import bridge.case5.abstraction.Pentagon;
+import bridge.case5.refined_abstraction.Pentagon;
 import bridge.case5.abstraction.Shape;
-import bridge.case5.abstraction.Triangle;
-import bridge.case5.implementor.GreenColor;
-import bridge.case5.implementor.RedColor;
+import bridge.case5.refined_abstraction.Triangle;
+import bridge.case5.concrete_implementor.GreenColor;
+import bridge.case5.concrete_implementor.RedColor;
 
 public class Client {
 

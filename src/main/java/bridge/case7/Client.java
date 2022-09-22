@@ -1,9 +1,9 @@
 package bridge.case7;
 
-import bridge.case7.abstraction.Circle;
+import bridge.case7.refined_abstraction.Circle;
 import bridge.case7.abstraction.Shape;
-import bridge.case7.implementor.GreenCircle;
-import bridge.case7.implementor.RedCircle;
+import bridge.case7.concrete_implementor.GreenCircle;
+import bridge.case7.concrete_implementor.RedCircle;
 
 public class Client {
 

@@ -1,10 +1,10 @@
 package bridge.case1;
 
-import bridge.case1.vehicle.Bike;
-import bridge.case1.vehicle.Car;
-import bridge.case1.vehicle.Vehicle;
-import bridge.case1.workshop.Assemble;
-import bridge.case1.workshop.Produce;
+import bridge.case1.refined_abstraction.Bike;
+import bridge.case1.refined_abstraction.Car;
+import bridge.case1.abstraction.Vehicle;
+import bridge.case1.concrete_implementor.Assemble;
+import bridge.case1.concrete_implementor.Produce;
 
 public class Client {
 	/**

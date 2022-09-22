@@ -1,7 +1,7 @@
 package bridge.case6;
 
-import bridge.case6.abstraction.QuestionFormat;
-import bridge.case6.implementor.JavaQuestions;
+import bridge.case6.refined_abstraction.QuestionFormat;
+import bridge.case6.concrete_implementor.JavaQuestions;
 
 public class Client {
 
