@@ -1,4 +1,6 @@
-package observer.case3.observer;
+package observer.case3.concrete_observer;
+
+import observer.case3.observer.AlarmListener;
 
 public class Lighting implements AlarmListener {
 	@Override

@@ -1,4 +1,4 @@
-package observer.case1.listeners;
+package observer.case1;
 
 public enum EventType {
     SAVE, OPEN

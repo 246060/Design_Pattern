@@ -1,8 +1,9 @@
 package observer.case3;
 
-import observer.case3.observer.Gates;
-import observer.case3.observer.Lighting;
-import observer.case3.observer.Surveillance;
+import observer.case3.concrete_observable.SensorSystem;
+import observer.case3.concrete_observer.Gates;
+import observer.case3.concrete_observer.Lighting;
+import observer.case3.concrete_observer.Surveillance;
 
 public class Client {
 

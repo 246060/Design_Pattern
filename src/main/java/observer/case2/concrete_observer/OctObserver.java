@@ -1,6 +1,7 @@
-package observer.case2.observer;
+package observer.case2.concrete_observer;
 
-import observer.case2.Subject;
+import observer.case2.concrete_observable.Subject;
+import observer.case2.observer.Observer;
 
 public class OctObserver extends Observer {
     @Override

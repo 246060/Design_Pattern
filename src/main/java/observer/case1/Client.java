@@ -1,10 +1,9 @@
 package observer.case1;
 
-import static observer.case1.listeners.EventType.*;
+import static observer.case1.EventType.*;
 
-import observer.case1.editor.Editor;
-import observer.case1.listeners.EmailNotificationListener;
-import observer.case1.listeners.LogOpenListener;
+import observer.case1.concrete_observer.EmailNotificationListener;
+import observer.case1.concrete_observer.LogOpenListener;
 
 public class Client {
 

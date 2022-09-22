@@ -1,4 +1,7 @@
-package observer.case1.listeners;
+package observer.case1.concrete_observer;
+
+import observer.case1.EventType;
+import observer.case1.observer.EventListener;
 
 import java.io.File;
 

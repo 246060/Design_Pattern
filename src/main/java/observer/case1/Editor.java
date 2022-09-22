@@ -1,11 +1,11 @@
-package observer.case1.editor;
+package observer.case1;
 
 
-import static observer.case1.listeners.EventType.*;
+import static observer.case1.EventType.*;
 
 import java.io.File;
 
-import observer.case1.publisher.EventManager;
+import observer.case1.concrete_observable.EventManager;
 
 public class Editor {
     // Concrete publisher, tracked by other objects

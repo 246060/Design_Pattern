@@ -1,8 +1,9 @@
 package observer.case2;
 
-import observer.case2.observer.BinObserver;
-import observer.case2.observer.HexObserver;
-import observer.case2.observer.OctObserver;
+import observer.case2.concrete_observable.Subject;
+import observer.case2.concrete_observer.BinObserver;
+import observer.case2.concrete_observer.HexObserver;
+import observer.case2.concrete_observer.OctObserver;
 
 import java.util.Scanner;
 

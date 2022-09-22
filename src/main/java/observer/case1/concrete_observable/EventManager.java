@@ -1,4 +1,4 @@
-package observer.case1.publisher;
+package observer.case1.concrete_observable;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import observer.case1.listeners.EventListener;
-import observer.case1.listeners.EventType;
+import observer.case1.observer.EventListener;
+import observer.case1.EventType;
 
 public class EventManager {
 	//  Basic publisher

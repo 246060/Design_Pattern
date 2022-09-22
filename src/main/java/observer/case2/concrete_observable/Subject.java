@@ -1,4 +1,4 @@
-package observer.case2;
+package observer.case2.concrete_observable;
 
 import observer.case2.observer.Observer;
 

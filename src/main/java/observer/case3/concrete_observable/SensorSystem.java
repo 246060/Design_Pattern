@@ -1,4 +1,4 @@
-package observer.case3;
+package observer.case3.concrete_observable;
 
 import observer.case3.observer.AlarmListener;
 
