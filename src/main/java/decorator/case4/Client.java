@@ -1,21 +1,31 @@
 package decorator.case4;
 
-import decorator.case4.Component_Implementation.BasicCar;
-import decorator.case4.Component_Interface.Car;
-import decorator.case4.Concrete_Decorators.LuxuryCar;
-import decorator.case4.Concrete_Decorators.SportsCar;
+import decorator.case4.Component_Implementation.VegFood;
+import decorator.case4.Component_Interface.Food;
+import decorator.case4.Concrete_Decorators.ChineseFood;
+import decorator.case4.Concrete_Decorators.NonVegFood;
 
 public class Client {
 
+	private static int choice;
+
 	public static void main(String[] args) {
 
-		Car sportsCar = new SportsCar(new BasicCar());
-		sportsCar.assemble();
+		VegFood vf = new VegFood();
+		System.out.println(vf.prepareFood());
+		System.out.println(vf.foodPrice());
 
-		System.out.println("\n*****");
+		Food f1 = new NonVegFood(new VegFood());
+		System.out.println(f1.prepareFood());
+		System.out.println(f1.foodPrice());
 
-		Car sportsLuxuryCar = new SportsCar(new LuxuryCar(new BasicCar()));
-		sportsLuxuryCar.assemble();
+		Food f2 = new ChineseFood(new VegFood());
+		System.out.println(f2.prepareFood());
+		System.out.println(f2.foodPrice());
+
+		Food f3 = new NonVegFood(new ChineseFood(new VegFood()));
+		System.out.println(f3.prepareFood());
+		System.out.println(f3.foodPrice());
+
 	}
-
 }

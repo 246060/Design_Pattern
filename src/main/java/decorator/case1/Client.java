@@ -1,7 +1,9 @@
 package decorator.case1;
 
-import decorator.case1.decorator.LuxuryCar;
-import decorator.case1.decorator.SportsCar;
+import decorator.case1.Component_Implementation.BasicCar;
+import decorator.case1.Component_Interface.Car;
+import decorator.case1.Concrete_Decorators.LuxuryCar;
+import decorator.case1.Concrete_Decorators.SportsCar;
 
 public class Client {
 

@@ -1,7 +1,9 @@
 package decorator.case2;
 
-import decorator.case2.decorator.DecoratorDemo;
-import decorator.case2.decorator.Scramble;
+import decorator.case2.Component_Implementation.Core;
+import decorator.case2.Component_Interface.LCD;
+import decorator.case2.Concrete_Decorators.DecoratorDemo;
+import decorator.case2.Concrete_Decorators.Scramble;
 
 public class Client {
 
