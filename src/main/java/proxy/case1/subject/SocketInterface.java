@@ -1,4 +1,4 @@
-package proxy.case2;
+package proxy.case1.subject;
 
 public interface SocketInterface {
     String readLine();

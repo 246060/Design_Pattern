@@ -1,4 +1,6 @@
-package proxy.case2;
+package proxy.case1.proxy;
+
+import proxy.case1.subject.SocketInterface;
 
 import java.io.BufferedReader;
 import java.io.IOException;

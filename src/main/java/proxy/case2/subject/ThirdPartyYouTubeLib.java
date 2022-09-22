@@ -1,4 +1,6 @@
-package proxy.case3;
+package proxy.case2.subject;
+
+import proxy.case2.Video;
 
 import java.util.HashMap;
 

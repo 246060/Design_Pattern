@@ -1,42 +1,39 @@
 package proxy.case2;
 
-import java.util.Scanner;
+import proxy.case2.proxy.YouTubeCacheProxy;
+import proxy.case2.real_subject.ThirdPartyYouTubeImp;
 
 public class Client {
-    // https://sourcemaking.com/design_patterns/proxy/java/1
+    // https://refactoring.guru/design-patterns/proxy/java/example
+
     public static void main(String[] args) {
 
-        final String host = "127.0.0.1";
-        final int port = 8080;
-        final boolean isServer = "first".equals(args[0]) ? true : false;
+        YouTubeDownloader naiveDownloader = new YouTubeDownloader(new ThirdPartyYouTubeImp());
+        YouTubeDownloader smartDownloader = new YouTubeDownloader(new YouTubeCacheProxy());
 
-        // The client deals with the wrapper
-        SocketInterface socket = new SocketProxy(host, port, isServer);
+        long naive = test(naiveDownloader);
+        long smart = test(smartDownloader);
 
-        String str;
-        boolean skip = true;
+        System.out.print("Time saved by caching proxy: " + (naive - smart) + "ms");
+    }
 
-        while (true) {
+    private static long test(YouTubeDownloader downloader) {
+        final long startTime = System.currentTimeMillis();
 
-            if ("second".equals(args[0]) && skip) {
-                skip = !skip;
+        // User behavior in our app:
+        downloader.renderPopularVideos();
+        downloader.renderVideoPage("catzzzzzzzzz");
 
-            } else {
-                str = socket.readLine();
-                System.out.println("Receive - " + str);
+        downloader.renderPopularVideos();
+        downloader.renderVideoPage("dancesvideoo");
 
-                if (str.equals(null)) {
-                    break;
-                }
-            }
+        // Users might visit the same page quite often.
+        downloader.renderVideoPage("catzzzzzzzzz");
+        downloader.renderVideoPage("someothervid");
 
-            System.out.println("Send ---- ");
-            str = new Scanner(System.in).nextLine();
-            socket.writeLine(str);
+        final long estimatedTime = System.currentTimeMillis() - startTime;
+        System.out.print("Time elapsed: " + estimatedTime + "ms\n");
 
-            if ("quit".equals(str)) {
-                break;
-            }
-        }
+        return estimatedTime;
     }
 }

@@ -1,20 +1,45 @@
 package proxy.case1;
 
+import proxy.case1.proxy.SocketProxy;
+import proxy.case1.subject.SocketInterface;
+
+import java.util.Scanner;
+
 public class Client {
-    // https://www.journaldev.com/1572/proxy-design-pattern
+    // https://sourcemaking.com/design_patterns/proxy/java/1
     public static void main(String[] args) {
 
-        String user = "Pankaj";
-        String pwd = "wrong_pwd";
+        final String host = "127.0.0.1";
+        final int port = 8080;
+        final boolean isServer = "first".equals(args[0]) ? true : false;
 
-        CommandExecutor executor = new CommandExecutorProxy(user, pwd);
+        // The client deals with the wrapper
+        SocketInterface socket = new SocketProxy(host, port, isServer);
 
-        try {
-            executor.runCommand("ls -ltr");
-            executor.runCommand(" rm -rf abc.pdf");
+        String str;
+        boolean skip = true;
 
-        } catch (Exception e) {
-            System.out.println("Exception Message::" + e.getMessage());
+        while (true) {
+
+            if ("second".equals(args[0]) && skip) {
+                skip = !skip;
+
+            } else {
+                str = socket.readLine();
+                System.out.println("Receive - " + str);
+
+                if (str.equals(null)) {
+                    break;
+                }
+            }
+
+            System.out.println("Send ---- ");
+            str = new Scanner(System.in).nextLine();
+            socket.writeLine(str);
+
+            if ("quit".equals(str)) {
+                break;
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-package proxy.case3;
+package proxy.case2;
 
 public class Video {
 

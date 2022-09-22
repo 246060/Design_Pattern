@@ -1,4 +1,7 @@
-package proxy.case3;
+package proxy.case2.real_subject;
+
+import proxy.case2.Video;
+import proxy.case2.subject.ThirdPartyYouTubeLib;
 
 import java.util.HashMap;
 

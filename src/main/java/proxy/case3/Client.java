@@ -1,34 +1,22 @@
 package proxy.case3;
 
+import proxy.case3.proxy.CommandExecutorProxy;
+import proxy.case3.subject.CommandExecutor;
+
 public class Client {
-    // https://refactoring.guru/design-patterns/proxy/java/example
-    public static void main(String[] args) {
-        YouTubeDownloader naiveDownloader = new YouTubeDownloader(new ThirdPartyYouTubeImp());
-        YouTubeDownloader smartDownloader = new YouTubeDownloader(new YouTubeCacheProxy());
 
-        long naive = test(naiveDownloader);
-        long smart = test(smartDownloader);
+	public static void main(String[] args) {
 
-        System.out.print("Time saved by caching proxy: " + (naive - smart) + "ms");
-    }
+		CommandExecutor executor = new CommandExecutorProxy("Pankaj", "wrong_pwd");
 
-    private static long test(YouTubeDownloader downloader) {
-        final long startTime = System.currentTimeMillis();
+		try {
 
-        // User behavior in our app:
-        downloader.renderPopularVideos();
-        downloader.renderVideoPage("catzzzzzzzzz");
+			executor.runCommand("ls -ltr");
+			executor.runCommand(" rm -rf abc.pdf");
 
-        downloader.renderPopularVideos();
-        downloader.renderVideoPage("dancesvideoo");
+		} catch (Exception e) {
+			System.out.println("Exception Message::" + e.getMessage());
+		}
+	}
 
-        // Users might visit the same page quite often.
-        downloader.renderVideoPage("catzzzzzzzzz");
-        downloader.renderVideoPage("someothervid");
-
-        final long estimatedTime = System.currentTimeMillis() - startTime;
-        System.out.print("Time elapsed: " + estimatedTime + "ms\n");
-
-        return estimatedTime;
-    }
 }
