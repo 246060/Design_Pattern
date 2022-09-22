@@ -1,6 +1,7 @@
-package flyweight.case1;
+package flyweight.case1.flyweight;
 
-// Flyweight 인터페이스
+import flyweight.case1.CoffeeOrderContext;
+
 public interface CoffeeOrder {
     void serveCoffee(CoffeeOrderContext coffeeOrderContext);
 }

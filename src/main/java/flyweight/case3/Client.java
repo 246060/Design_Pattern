@@ -1,9 +1,32 @@
 package flyweight.case3;
 
+import flyweight.case3.flyweight.Vehicle;
+import flyweight.case3.flyweight_factory.VehicleFactory;
+
+import java.awt.*;
+
 public class Client {
 
-    // https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%9B%A8%EC%9D%B4%ED%8A%B8_%ED%8C%A8%ED%84%B4
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-    }
+		Vehicle vehicle1 = VehicleFactory.createVehicle(Color.BLACK);
+
+		vehicle1.start();
+		vehicle1.stop();
+		Color color = vehicle1.getColor();
+		System.out.println("color = " + color);
+
+
+		System.out.println("-------------------------------");
+
+		Vehicle vehicle2 = VehicleFactory.createVehicle(Color.BLACK);
+
+		vehicle2.start();
+		vehicle2.stop();
+		color = vehicle2.getColor();
+		System.out.println("color = " + color);
+
+
+		System.out.println("\nvehicle1 == vehicle2 ? " + (vehicle1 == vehicle2));
+	}
 }

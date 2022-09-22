@@ -1,27 +1,33 @@
 package flyweight.case4;
 
+import flyweight.case4.flyweight.Player;
+import flyweight.case4.flyweight_factory.PlayerFactory;
+
+import java.util.Random;
+
 public class Client {
 
-    private static final String colors[] = {"Red", "Green", "Blue", "White", "Black"};
+	private static String[] playerType = {"Terrorist", "CounterTerrorist"};
+	private static String[] weapons = {"AK-47", "Maverick", "Gut Knife", "Desert Eagle"};
 
-    private static String getRandomColor() { return colors[(int) (Math.random() * colors.length)]; }
+	public static void main(String[] args) {
 
-    private static int getRandomX() { return (int) (Math.random() * 100); }
-    private static int getRandomY() { return (int) (Math.random() * 100); }
+		for (int i = 0; i < 10; i++) {
+			Player p = PlayerFactory.getPlayer(getRandPlayerType());
+			p.assignWeapon(getRandWeapon());
+			p.mission();
+		}
+	}
 
-    // https://www.tutorialspoint.com/design_pattern/flyweight_pattern.htm
-    public static void main(String[] args) {
+	public static String getRandPlayerType() {
+		Random r = new Random();
+		int randInt = r.nextInt(playerType.length);
+		return playerType[randInt];
+	}
 
-        for (int i = 0; i < 20; ++i) {
-            Circle circle = (Circle) ShapeFactory.getCircle(getRandomColor());
-
-            circle.setX(getRandomX());
-            circle.setY(getRandomY());
-            circle.setRadius(100);
-
-            circle.draw();
-        }
-    }
-
-
+	public static String getRandWeapon() {
+		Random r = new Random();
+		int randInt = r.nextInt(weapons.length);
+		return weapons[randInt];
+	}
 }

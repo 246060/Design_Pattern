@@ -1,51 +1,54 @@
 package flyweight.case1;
 
+import flyweight.case1.concrete_flyweight.CoffeeFlavor;
+import flyweight.case1.flyweight_factory.CoffeeFlavorFactory;
+
 public class Client {
 
-    /**
-     * The flavors ordered.
-     */
-    private static CoffeeFlavor[] flavors = new CoffeeFlavor[100];
+	/**
+	 * The flavors ordered.
+	 */
+	private static CoffeeFlavor[] flavors = new CoffeeFlavor[100];
 
-    /**
-     * The tables for the orders.
-     */
-    private static CoffeeOrderContext[] tables = new CoffeeOrderContext[100];
+	/**
+	 * The tables for the orders.
+	 */
+	private static CoffeeOrderContext[] tables = new CoffeeOrderContext[100];
 
-    private static int ordersMade = 0;
-    private static CoffeeFlavorFactory flavorFactory;
+	private static int ordersMade = 0;
+	private static CoffeeFlavorFactory flavorFactory;
 
-    public static void takeOrders(String flavorIn, int table) {
-        flavors[ordersMade] = flavorFactory.getCoffeeFlavor(flavorIn);
-        tables[ordersMade++] = new CoffeeOrderContext(table);
-    }
+	public static void takeOrders(String flavorIn, int table) {
+		flavors[ordersMade] = flavorFactory.getCoffeeFlavor(flavorIn);
+		tables[ordersMade++] = new CoffeeOrderContext(table);
+	}
 
-    // https://arisu1000.tistory.com/27684
-    public static void main(String[] args) {
+	// https://arisu1000.tistory.com/27684
+	public static void main(String[] args) {
 
-        flavorFactory = new CoffeeFlavorFactory();
+		flavorFactory = new CoffeeFlavorFactory();
 
-        takeOrders("Cappuccino", 2);
-        takeOrders("Cappuccino", 2);
-        takeOrders("Frappe", 1);
-        takeOrders("Frappe", 1);
-        takeOrders("Xpresso", 1);
-        takeOrders("Frappe", 897);
-        takeOrders("Cappuccino", 97);
-        takeOrders("Cappuccino", 97);
-        takeOrders("Frappe", 3);
-        takeOrders("Xpresso", 3);
-        takeOrders("Cappuccino", 3);
-        takeOrders("Xpresso", 96);
-        takeOrders("Frappe", 552);
-        takeOrders("Cappuccino", 121);
-        takeOrders("Xpresso", 121);
+		takeOrders("Cappuccino", 2);
+		takeOrders("Cappuccino", 2);
+		takeOrders("Frappe", 1);
+		takeOrders("Frappe", 1);
+		takeOrders("Xpresso", 1);
+		takeOrders("Frappe", 897);
+		takeOrders("Cappuccino", 97);
+		takeOrders("Cappuccino", 97);
+		takeOrders("Frappe", 3);
+		takeOrders("Xpresso", 3);
+		takeOrders("Cappuccino", 3);
+		takeOrders("Xpresso", 96);
+		takeOrders("Frappe", 552);
+		takeOrders("Cappuccino", 121);
+		takeOrders("Xpresso", 121);
 
-        for (int i = 0; i < ordersMade; ++i) {
-            flavors[i].serveCoffee(tables[i]);
-        }
+		for (int i = 0; i < ordersMade; ++i) {
+			flavors[i].serveCoffee(tables[i]);
+		}
 
-        System.out.println(" ");
-        System.out.println("total CoffeeFlavor objects made: " + flavorFactory.getTotalCoffeeFlavorsMade());
-    }
+		System.out.println(" ");
+		System.out.println("total CoffeeFlavor objects made: " + flavorFactory.getTotalCoffeeFlavorsMade());
+	}
 }
