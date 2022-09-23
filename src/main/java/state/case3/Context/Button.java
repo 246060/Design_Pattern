@@ -1,7 +1,7 @@
-package state.case3;
+package state.case3.Context;
 
-import state.case3.state.OFF;
-import state.case3.state.State;
+import state.case3.ConcreteState.OFF;
+import state.case3.AbstractState.State;
 
 // 1. The "wrapper" class
 public class Button {

@@ -1,5 +1,7 @@
 package state.case1;
 
+import state.case1.Context.Player;
+
 import javax.swing.*;
 import java.awt.*;
 

@@ -1,6 +1,7 @@
-package state.case3.state;
+package state.case3.AbstractState;
 
-import state.case3.Button;
+import state.case3.Context.Button;
+import state.case3.ConcreteState.OFF;
 
 // 4. The "wrappee" hierarchy
 public class State {

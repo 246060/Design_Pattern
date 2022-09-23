@@ -1,6 +1,7 @@
-package state.case3.state;
+package state.case3.ConcreteState;
 
-import state.case3.Button;
+import state.case3.AbstractState.State;
+import state.case3.Context.Button;
 
 public class OFF extends State {
 

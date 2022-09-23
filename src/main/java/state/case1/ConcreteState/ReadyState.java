@@ -1,6 +1,7 @@
-package state.case1.state;
+package state.case1.ConcreteState;
 
-import state.case1.Player;
+import state.case1.AbstractState.State;
+import state.case1.Context.Player;
 
 public class ReadyState extends State {
 

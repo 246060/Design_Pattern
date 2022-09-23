@@ -1,6 +1,7 @@
-package state.case2.state;
+package state.case2.ConcreteState;
 
-import state.case2.Chain;
+import state.case2.AbstractState.State;
+import state.case2.Context.Chain;
 
 public class Medium extends State {
 

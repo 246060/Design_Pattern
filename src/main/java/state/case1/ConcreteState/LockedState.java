@@ -1,10 +1,11 @@
-package state.case1.state;
+package state.case1.ConcreteState;
 
-import state.case1.Player;
+import state.case1.AbstractState.State;
+import state.case1.Context.Player;
 
 public class LockedState extends State {
 
-	LockedState(Player player) {
+	public LockedState(Player player) {
 		super(player);
 		player.setPlaying(false);
 	}

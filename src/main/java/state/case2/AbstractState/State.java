@@ -1,6 +1,7 @@
-package state.case2.state;
+package state.case2.AbstractState;
 
-import state.case2.Chain;
+import state.case2.Context.Chain;
+import state.case2.ConcreteState.Off;
 
 public class State {
 

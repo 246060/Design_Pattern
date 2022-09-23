@@ -1,7 +1,7 @@
-package state.case1;
+package state.case1.Context;
 
-import state.case1.state.ReadyState;
-import state.case1.state.State;
+import state.case1.ConcreteState.ReadyState;
+import state.case1.AbstractState.State;
 
 import java.util.ArrayList;
 import java.util.List;
