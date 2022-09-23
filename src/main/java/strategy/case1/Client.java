@@ -1,12 +1,12 @@
 package strategy.case1;
 
-import strategy.case1.context.Duck;
-import strategy.case1.context.MachineDuck;
-import strategy.case1.context.MallardDuck;
-import strategy.case1.strategy.EnglishQuack;
-import strategy.case1.strategy.FlyRocketPowered;
-import strategy.case1.strategy.FlyWithWings;
-import strategy.case1.strategy.KoreanQuack;
+import strategy.case1.Context.Duck;
+import strategy.case1.Context.MachineDuck;
+import strategy.case1.Context.MallardDuck;
+import strategy.case1.ConcreteStrategy.EnglishQuack;
+import strategy.case1.ConcreteStrategy.FlyRocketPowered;
+import strategy.case1.ConcreteStrategy.FlyWithWings;
+import strategy.case1.ConcreteStrategy.KoreanQuack;
 
 public class Client {
 

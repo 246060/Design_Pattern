@@ -1,9 +1,9 @@
 package strategy.case2;
 
-import strategy.case2.context.ConcreteContext;
-import strategy.case2.context.Context;
-import strategy.case2.strategy.ConcreteStrategy1;
-import strategy.case2.strategy.ConcreteStrategy2;
+import strategy.case2.Context.ConcreteContext;
+import strategy.case2.Context.Context;
+import strategy.case2.ConcreteStrategy.ConcreteStrategy1;
+import strategy.case2.ConcreteStrategy.ConcreteStrategy2;
 
 public class Client {
 

@@ -1,8 +1,8 @@
 package strategy.case3;
 
-import strategy.case3.strategy.Bar;
-import strategy.case3.strategy.Foo;
-import strategy.case3.strategy.Strategy;
+import strategy.case3.ConcreteStrategy.Bar;
+import strategy.case3.ConcreteStrategy.Foo;
+import strategy.case3.Strategy.Strategy;
 
 public class Client {
 
