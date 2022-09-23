@@ -1,8 +1,11 @@
 package command.case3;
 
-import command.case3.command.HeaterOnCommand;
-import command.case3.command.LampOffCommand;
-import command.case3.command.LampOnCommand;
+import command.case3.ConcreteCommand.HeaterOnCommand;
+import command.case3.ConcreteCommand.LampOffCommand;
+import command.case3.ConcreteCommand.LampOnCommand;
+import command.case3.ConcreteReceiver.Heater;
+import command.case3.ConcreteReceiver.Lamp;
+import command.case3.Invoker.OkGoogle;
 
 public class Client {
 

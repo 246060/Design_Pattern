@@ -1,7 +1,10 @@
 package command.case4;
 
-import command.case4.command.AlarmOnCommand;
-import command.case4.command.LampOnCommand;
+import command.case4.ConcreteCommand.AlarmOnCommand;
+import command.case4.ConcreteCommand.LampOnCommand;
+import command.case4.Invoker.Button;
+import command.case4.Receiver.Alarm;
+import command.case4.Receiver.Lamp;
 
 public class Client {
 
@@ -10,12 +13,10 @@ public class Client {
 
 		Button button = new Button();
 
-		Lamp lamp = new Lamp();
-		button.setCommand(new LampOnCommand(lamp));
+		button.setCommand(new LampOnCommand(new Lamp()));
 		button.pressed();
 
-		Alarm alarm = new Alarm();
-		button.setCommand(new AlarmOnCommand(alarm));
+		button.setCommand(new AlarmOnCommand(new Alarm()));
 		button.pressed();
 
 	}

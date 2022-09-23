@@ -1,14 +1,13 @@
 package visitor.case1;
 
-import visitor.case1.visitable.Book;
-import visitor.case1.visitable.Fruit;
-import visitor.case1.visitable.ItemElement;
-import visitor.case1.visitor.ShoppingCartVisitor;
-import visitor.case1.visitor.ShoppingCartVisitorImpl;
+import visitor.case1.ConcreteElement.Book;
+import visitor.case1.ConcreteElement.Fruit;
+import visitor.case1.Element.ItemElement;
+import visitor.case1.Visitor.ShoppingCartVisitor;
+import visitor.case1.ConcreteVisitor.ShoppingCartVisitorImpl;
 
 public class Client {
 
-	// https://www.journaldev.com/1769/visitor-design-pattern-java
 	public static void main(String[] args) {
 
 		ItemElement[] items = new ItemElement[]{
@@ -24,6 +23,7 @@ public class Client {
 	}
 
 	private static int calculatePrice(ItemElement[] items) {
+
 		ShoppingCartVisitor visitor = new ShoppingCartVisitorImpl();
 		int sum = 0;
 
