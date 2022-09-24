@@ -1,4 +1,6 @@
-package mediator.case3;
+package mediator.case3.Mediador;
+
+import mediator.case3.Component.ChatUser;
 
 import java.util.ArrayList;
 import java.util.List;

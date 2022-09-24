@@ -1,4 +1,6 @@
-package mediator.case3;
+package mediator.case3.Component;
+
+import mediator.case3.Mediador.ChatMediator;
 
 public class ChatUser {
 

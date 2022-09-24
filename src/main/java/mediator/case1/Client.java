@@ -1,5 +1,9 @@
 package mediator.case1;
 
+import mediator.case1.Component.Consumer;
+import mediator.case1.Component.Producer;
+import mediator.case1.Mediador.Mediator;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

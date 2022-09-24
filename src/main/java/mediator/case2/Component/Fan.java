@@ -1,4 +1,6 @@
-package mediator.case2;
+package mediator.case2.Component;
+
+import mediator.case2.Mediador.Mediator;
 
 public class Fan {
 

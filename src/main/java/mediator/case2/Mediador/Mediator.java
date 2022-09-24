@@ -1,4 +1,8 @@
-package mediator.case2;
+package mediator.case2.Mediador;
+
+import mediator.case2.Component.Button;
+import mediator.case2.Component.Fan;
+import mediator.case2.PowerSupplier;
 
 public class Mediator {
 
@@ -19,7 +23,6 @@ public class Mediator {
 	public void setPowerSupplier(PowerSupplier powerSupplier) {
 		this.powerSupplier = powerSupplier;
 	}
-
 
 	public void press() {
 		if (fan.isOn()) {

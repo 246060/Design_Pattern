@@ -1,11 +1,13 @@
-package mediator.case1;
+package mediator.case1.Component;
+
+import mediator.case1.Mediador.Mediator;
 
 public class Consumer implements Runnable {
-	// 3. Consumers are coupled only to the Mediator
 
-	private Mediator mediator;
 	private int id;
 	private static int num = 1;
+
+	private Mediator mediator;
 
 	public Consumer(Mediator mediator) {
 		this.mediator = mediator;

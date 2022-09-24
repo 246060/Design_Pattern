@@ -1,9 +1,7 @@
-package mediator.case1;
+package mediator.case1.Mediador;
 
-// 1. The "intermediary"
 public class Mediator {
 
-	// 4. The Mediator arbitrates
 	private boolean slotFull = false;
 	private int number;
 
