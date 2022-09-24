@@ -1,34 +1,35 @@
 package chain_of_responsibility.case4;
 
 public class File {
-    private final String name;
-    private final String type;
-    private final String path;
 
-    public File(String name, String type, String path) {
-        this.name = name;
-        this.type = type;
-        this.path = path;
-    }
+	private final String name;
+	private final String type;
+	private final String path;
 
-    public String getName() {
-        return name;
-    }
+	public File(String name, String type, String path) {
+		this.name = name;
+		this.type = type;
+		this.path = path;
+	}
 
-    public String getType() {
-        return type;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getPath() {
-        return path;
-    }
+	public String getType() {
+		return type;
+	}
 
-    @Override
-    public String toString() {
-        return "File{" +
-                "name='" + name + '\'' +
-                ", type='" + type + '\'' +
-                ", path='" + path + '\'' +
-                '}';
-    }
+	public String getPath() {
+		return path;
+	}
+
+	@Override
+	public String toString() {
+		return "File{" +
+						"name='" + name + '\'' +
+						", type='" + type + '\'' +
+						", path='" + path + '\'' +
+						'}';
+	}
 }

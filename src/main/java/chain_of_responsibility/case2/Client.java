@@ -1,5 +1,10 @@
 package chain_of_responsibility.case2;
 
+import chain_of_responsibility.case2.ConcreteHandler.Dollar10Dispenser;
+import chain_of_responsibility.case2.ConcreteHandler.Dollar20Dispenser;
+import chain_of_responsibility.case2.ConcreteHandler.Dollar50Dispenser;
+import chain_of_responsibility.case2.Handler.DispenseChain;
+
 import java.util.Scanner;
 
 public class Client {
