@@ -13,7 +13,7 @@
 - [Abstract Factory](src/main/java/abstract_factory)
 - [Builder](src/main/java/bridge)
 - [Singleton](src/main/java/singleton)
-- [Prototype](src/main/java/Prototype)
+- [prototype](src/main/java/prototype)
 
 ## Structural
 - [Adapter](src/main/java/adapter) 
