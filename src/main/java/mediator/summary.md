@@ -9,7 +9,7 @@ through a special mediator object.
 
 Usage examples: The most popular usage of the Mediator pattern in Java code is 
 facilitating communications between GUI components of an app. 
-The synonym of the Mediator is the Controller part of MVC pattern.
+The synonym of the Mediator is the Controller part of mvc pattern.
 
 Here are some examples of the pattern in core Java libraries:
 
