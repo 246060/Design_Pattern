@@ -1,21 +1,23 @@
 package state.case4;
 
-import state.case4.ConcreteState.TVStartState;
-import state.case4.ConcreteState.TVStopState;
-import state.case4.Context.TVContext;
+import state.case4.ConcreteState.StartState;
+import state.case4.ConcreteState.StopState;
+import state.case4.Context.Context;
 
 public class Client {
 
 	public static void main(String[] args) {
 
-		TVContext context = new TVContext();
+		Context context = new Context();
 
-		context.setState(new TVStartState());
-		context.doAction();
+		StartState startState = new StartState();
+		startState.doAction(context);
+		System.out.println(context.getState().toString());
 
-		context.setState(new TVStopState());
-		context.doAction();
+
+		StopState stopState = new StopState();
+		stopState.doAction(context);
+		System.out.println(context.getState().toString());
 
 	}
-
 }
