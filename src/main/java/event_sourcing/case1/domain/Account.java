@@ -1,7 +1,5 @@
 package event_sourcing.case1.domain;
 
-import java.math.BigDecimal;
-
 import event_sourcing.case1.event.AccountCreateEvent;
 import event_sourcing.case1.event.MoneyDepositEvent;
 import event_sourcing.case1.event.MoneyTransferEvent;
@@ -11,10 +9,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
+import java.math.BigDecimal;
+
 /**
- * This is the Account class that holds the account info, the account number, account owner name and
- * money of the account. Account class also have the business logic of events that effects this
- * account.
+ * Account class also have the business logic of events that effects this account.
  */
 @Setter
 @Getter
@@ -50,6 +48,7 @@ public class Account {
 	private void handleDeposit(BigDecimal money, boolean realTime) {
 		depositMoney(money);
 		AccountAggregate.putAccount(this);
+
 		if (realTime) {
 			log.info(MSG);
 		}
@@ -62,26 +61,16 @@ public class Account {
 
 		withdrawMoney(money);
 		AccountAggregate.putAccount(this);
+
 		if (realTime) {
 			log.info(MSG);
 		}
 	}
 
-	/**
-	 * Handles the MoneyDepositEvent.
-	 *
-	 * @param moneyDepositEvent the money deposit event
-	 */
 	public void handleEvent(MoneyDepositEvent moneyDepositEvent) {
 		handleDeposit(moneyDepositEvent.getMoney(), moneyDepositEvent.isRealTime());
 	}
 
-
-	/**
-	 * Handles the AccountCreateEvent.
-	 *
-	 * @param accountCreateEvent the account create event
-	 */
 	public void handleEvent(AccountCreateEvent accountCreateEvent) {
 		AccountAggregate.putAccount(this);
 		if (accountCreateEvent.isRealTime()) {
@@ -89,23 +78,11 @@ public class Account {
 		}
 	}
 
-	/**
-	 * Handles transfer from account event.
-	 *
-	 * @param moneyTransferEvent the money transfer event
-	 */
 	public void handleTransferFromEvent(MoneyTransferEvent moneyTransferEvent) {
 		handleWithdrawal(moneyTransferEvent.getMoney(), moneyTransferEvent.isRealTime());
 	}
 
-	/**
-	 * Handles transfer to account event.
-	 *
-	 * @param moneyTransferEvent the money transfer event
-	 */
 	public void handleTransferToEvent(MoneyTransferEvent moneyTransferEvent) {
 		handleDeposit(moneyTransferEvent.getMoney(), moneyTransferEvent.isRealTime());
 	}
-
-
 }

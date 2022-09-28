@@ -4,9 +4,7 @@ import event_driven_architecture.case1.event.UserUpdatedEvent;
 import event_driven_architecture.case1.framework.Handler;
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * Handles the {@link UserUpdatedEvent} message.
- */
+
 @Slf4j
 public class UserUpdatedEventHandler implements Handler<UserUpdatedEvent> {
 

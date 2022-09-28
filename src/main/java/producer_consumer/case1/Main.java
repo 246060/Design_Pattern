@@ -12,8 +12,8 @@ public class Main {
     var executorService = Executors.newFixedThreadPool(5);
 
     for (var i = 0; i < 2; i++) {
-
       final var producer = new Producer("Producer_" + i, queue);
+
       executorService.submit(() -> {
         while (true) {
           producer.produce();
@@ -23,6 +23,7 @@ public class Main {
 
     for (var i = 0; i < 3; i++) {
       final var consumer = new Consumer("Consumer_" + i, queue);
+
       executorService.submit(() -> {
         while (true) {
           consumer.consume();
@@ -35,6 +36,7 @@ public class Main {
     try {
       executorService.awaitTermination(10, TimeUnit.SECONDS);
       executorService.shutdownNow();
+
     } catch (InterruptedException e) {
       System.out.println("Error waiting for ExecutorService shutdown");
     }

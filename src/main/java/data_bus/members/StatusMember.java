@@ -14,8 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * Receiver of Data-Bus events.
- *
- * @author Paul Campbell (pcampbell@kemitix.net)
  */
 @Getter
 @Slf4j

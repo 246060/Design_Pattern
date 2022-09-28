@@ -9,8 +9,6 @@ import lombok.RequiredArgsConstructor;
 
 /**
  * An event raised when applications stops, containing the stop time of the application.
- *
- * @author Paul Campbell (pcampbell@kemitix.net)
  */
 @RequiredArgsConstructor
 @Getter

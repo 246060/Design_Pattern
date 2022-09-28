@@ -19,14 +19,12 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class App {
 
-  /**
-   * Program entry point.
-   *
-   * @param args command line args
-   */
   public static void main(String[] args) {
+
     final var inventory = new Inventory(1000);
+
     var executorService = Executors.newFixedThreadPool(3);
+
     IntStream.range(0, 3).<Runnable>mapToObj(i -> () -> {
       while (inventory.addItem(new Item())) {
         log.info("Adding another item");
@@ -34,8 +32,10 @@ public class App {
     }).forEach(executorService::execute);
 
     executorService.shutdown();
+
     try {
       executorService.awaitTermination(5, TimeUnit.SECONDS);
+
     } catch (InterruptedException e) {
       log.error("Error waiting for ExecutorService shutdown");
       Thread.currentThread().interrupt();

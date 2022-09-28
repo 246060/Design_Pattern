@@ -6,7 +6,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 /**
- * This is the base class for domain events. All events must extend this class.
+ * This is the base class for domain events.
+ * All events must extend this class.
  */
 @Setter
 @Getter

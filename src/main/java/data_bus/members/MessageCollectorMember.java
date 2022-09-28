@@ -10,14 +10,11 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * Receiver of Data-Bus events that collects the messages from each {@link MessageData}.
- *
- * @author Paul Campbell (pcampbell@kemitix.net)
  */
 @Slf4j
 public class MessageCollectorMember implements Member {
 
   private final String name;
-
   private final List<String> messages = new ArrayList<>();
 
   public MessageCollectorMember(String name) {

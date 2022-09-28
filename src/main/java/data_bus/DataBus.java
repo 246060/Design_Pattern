@@ -6,15 +6,11 @@ import java.util.Set;
 
 /**
  * The Data-Bus implementation.
- *
- * <p>This implementation uses a Singleton.</p>
- *
- * @author Paul Campbell (pcampbell@kemitix.net)
+ * This implementation uses a Singleton.
  */
 public class DataBus {
 
   private static final DataBus INSTANCE = new DataBus();
-
   private final Set<Member> listeners = new HashSet<>();
 
   public static DataBus getInstance() {

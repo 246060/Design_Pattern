@@ -21,8 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This is the implementation of event journal. This implementation serialize/deserialize the events
- * with JSON and writes/reads them on a Journal.json file at the working directory.
+ * This is the implementation of event journal.
+ * This implementation serialize/deserialize the events with JSON and writes/reads them on a Journal.json file at the working directory.
  */
 public class JsonFileJournal {
 
@@ -30,9 +30,6 @@ public class JsonFileJournal {
 	private final List<String> events = new ArrayList<>();
 	private int index = 0;
 
-	/**
-	 * Instantiates a new Json file journal.
-	 */
 	public JsonFileJournal() {
 
 		file = new File("Journal.json");
@@ -85,12 +82,6 @@ public class JsonFileJournal {
 		file.delete();
 	}
 
-
-	/**
-	 * Read next domain event.
-	 *
-	 * @return the domain event
-	 */
 	public DomainEvent readNext() {
 
 		if (index >= events.size()) {

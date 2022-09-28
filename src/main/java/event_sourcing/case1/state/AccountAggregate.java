@@ -6,9 +6,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-/**
- * This is the static accounts map holder class. This class holds the state of the accounts.
- */
 public class AccountAggregate {
 
   private static Map<Integer, Account> accounts = new HashMap<>();

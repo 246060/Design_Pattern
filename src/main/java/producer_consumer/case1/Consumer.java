@@ -1,10 +1,11 @@
 package producer_consumer.case1;
 
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class Consumer {
 
 	private final ItemQueue queue;
-
 	private final String name;
 
 	public Consumer(String name, ItemQueue queue) {
@@ -14,9 +15,6 @@ public class Consumer {
 
 	public void consume() throws InterruptedException {
 		var item = queue.take();
-
-		System.out.println("Consumer [" + name + "] " +
-						"consume item [" + item.getId() + "] " +
-						"produced by [{" + item.getProducer() + "}]");
+		log.info("Consumer [{}] consume item [{}] produced by [{}]", name, item.getId(), item.getProducer());
 	}
 }
